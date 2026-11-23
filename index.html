@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CI/CD Lab Assignment</title>
+</head>
+<body>
+
+    <h1>CI/CD Testing Web Application</h1>
+
+    <h2>Test 1: Button Click</h2>
+    <button id="clickBtn" onclick="showMessage()">
+        Click Me
+    </button>
+    <p id="clickMessage"></p>
+
+    <h2>Test 2: Text Input</h2>
+    <input type="text" id="userInput"
+           placeholder="Enter your text">
+
+    <button id="submitBtn" onclick="displayText()">
+        Submit
+    </button>
+
+    <p id="outputText"></p>
+
+    <script>
+        function showMessage() {
+            document.getElementById("clickMessage")
+                .innerText = "Button clicked successfully!";
+        }
+
+        function displayText() {
+            let text = document.getElementById("userInput").value;
+
+            document.getElementById("outputText")
+                .innerText = text;
+        }
+    </script>
+
+</body>
+</html>
