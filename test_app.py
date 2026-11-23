@@ -32,10 +32,9 @@ class TestWebApplication(unittest.TestCase):
             By.ID, "clickMessage"
         ).text
 
-        # INTENTIONALLY WRONG: Demonstrates pipeline failure
         self.assertEqual(
             message,
-            "This message is intentionally incorrect!"
+            "Button clicked successfully!"
         )
 
         print("Button Click Test: PASSED")
@@ -56,7 +55,8 @@ class TestWebApplication(unittest.TestCase):
         ).text
 
         self.assertEqual(
-            output, "Selenium Testing"
+            output,
+            "Selenium Testing"
         )
 
         print("Text Input Test: PASSED")
